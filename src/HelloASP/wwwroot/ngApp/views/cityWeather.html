@@ -1,0 +1,10 @@
+﻿<h2> {{controller.name}}</h2>
+<div class="day-list">
+    <div class="day" ng-repeat="day in controller.forecasts">
+        <div>{{day.forecastDate|date: 'EEEE'}}</div>
+        <div>Current Temp: {{day.temp}}&deg;F</div>
+        <div>High/Low: {{day.highTemp}}&deg;F/{{day.lowTemp}}&deg;F</div>
+        <div>{{day.description}}</div>
+    </div>
+
+</div>

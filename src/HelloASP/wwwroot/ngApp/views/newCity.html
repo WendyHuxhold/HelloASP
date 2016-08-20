@@ -1,0 +1,20 @@
+﻿<!--<form ng-submit="controller.addCity()">
+    <input ng-model="controller.city.name" placeholder="Name" />
+    <inut ng-model = "controller.city.state" placeholder="State"/>
+
+    <input type="submit" value="Add City" />
+</form>-->
+
+<form ng-submit="controller.addCity(city, currentTemp, currentDesc)">
+
+    <div ng-show = "controller.errors['city.Name']">{{controller.errors['city.Name']}}</div>
+    <input ng-model="city.name" placeholder="Name" />
+    <div ng-show="controller.errors['city.State']" ng-repeat="error in controller.errors['city.State']">
+        <span>{{error}}</span>
+        </div>
+    <input ng-model="city.state" placeholder="State" />
+    <input ng-model="currentTemp" placeholder="Current Temperature" type="number"/>
+    <input ng-model="currentDesc" placeholder="Current Description" />
+    
+    <input type="submit" value="Add City" />
+</form>

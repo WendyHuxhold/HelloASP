@@ -1,0 +1,11 @@
+﻿<div class="city-list">
+    <div class="city" ng-repeat="city in controller.cities"
+         ui-sref="weather({cityName: city.name, state: city.state})">
+        <div>{{city.name}}, {{city.state}} </div>
+        <div>Today's Temp: {{city.forecasts[0].temp}}&deg;F</div>
+        <div>{{city.forecasts[0].description}}</div>
+    </div>
+</div>
+<div ui-sref="addCity">
+    Add City
+</div>
